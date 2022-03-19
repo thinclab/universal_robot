@@ -36,6 +36,7 @@
   <arg name="kinematics_params" default="$(find ur_description)/config/ur3e/default_kinematics.yaml"/>
   <arg name="physical_params" default="$(find ur_description)/config/ur3e/physical_parameters.yaml"/>
   <arg name="visual_params" default="$(find ur_description)/config/ur3e/visual_parameters.yaml"/>
+  <!-- <arg name="limited" default="false" /> -->
 
   <!-- Controller configuration -->
   <arg name="controller_config_file" default="$(find ur_gazebo)/config/ur3e_controllers.yaml" doc="Config file used for defining the ROS-Control controllers."/>
@@ -50,12 +51,14 @@
   <arg name="paused" default="false" doc="Starts Gazebo in paused mode" />
   <arg name="gui" default="true" doc="Starts Gazebo gui" />
 
+
   <!-- Load urdf on the parameter server -->
   <include file="$(arg robot_description_file)">
     <arg name="joint_limit_params" value="$(arg joint_limit_params)"/>
     <arg name="kinematics_params" value="$(arg kinematics_params)"/>
     <arg name="physical_params" value="$(arg physical_params)"/>
     <arg name="visual_params" value="$(arg visual_params)"/>
+    <!-- <arg name="limited" default="$(arg limited)" /> -->
   </include>
 
   <!-- Robot state publisher -->

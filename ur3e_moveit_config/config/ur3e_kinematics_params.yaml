@@ -1,0 +1,9 @@
+opw_kinematics_geometric_parameters:
+  d1: 0.152
+  a2: -0.244
+  a3: -0.213
+  d4: 0.131  # wrist1_length = d4 - elbow_offset - shoulder_offset 
+  d5: 0.085
+  d6: 0.092
+opw_kinematics_joint_offsets: [0, 0, 0, 0, 0, 0]
+opw_kinematics_joint_sign_corrections: [1, 1, 1, 1, 1, 1]
